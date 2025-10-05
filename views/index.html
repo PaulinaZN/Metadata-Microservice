@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Metadata Microservice</title>
+    <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+      .container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 500px;
+      }
+      h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+      code {
+        background-color: #eee;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      input[type="file"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        max-width: 300px;
+      }
+      input[type="submit"] {
+        background-color: #1976d2;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      input[type="submit"]:hover {
+        background-color: #1565c0;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Microservicio de Metadatos de Archivos</h1>
+      <h3>
+        Envía un archivo para obtener su nombre, tipo y tamaño en formato JSON.
+      </h3>
+      <form
+        enctype="multipart/form-data"
+        method="POST"
+        action="/api/fileanalyse"
+      >
+        <!-- CRÍTICO: El nombre del campo debe ser 'upfile' para que el test pase -->
+        <input id="inputField" type="file" name="upfile" required />
+        <input type="submit" value="Upload" />
+      </form>
 
+      <p>
+        **Ruta de la API:** <code>POST /api/fileanalyse</code>
+      </p>
+    </div>
+  </body>
+</html>
