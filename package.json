@@ -1,6 +1,4 @@
 
-:package.json
-{
   "name": "fcc-file-metadata-microservice",
   "version": "1.0.0",
   "description": "A microservice to get file metadata",
@@ -15,19 +13,5 @@
   }
 }
 
-
-### 3. `views/index.html` (El Formulario)
-
-Este archivo debe estar **dentro de la carpeta `views`** y contener el formulario que requiere FreeCodeCamp.
-
-
-http://googleusercontent.com/immersive_entry_chip/0
-
-### 4. `.gitignore`
-
-Finalmente, incluye este archivo en la raíz para evitar subir archivos innecesarios o sensibles a GitHub:
-
-
-http://googleusercontent.com/immersive_entry_chip/1
-
+ 
 
